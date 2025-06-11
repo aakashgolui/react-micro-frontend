@@ -1,8 +1,11 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Button from "remoteApp/Button";
+import { lazy, Suspense } from "react";
+
 import useCount from "remoteApp/store";
+
+const RemoteButton = lazy(() => import("remoteApp/Button"));
 
 function App() {
   const [state, setState] = useCount();
@@ -17,7 +20,9 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <Button />
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <RemoteButton />
+      </Suspense>
       <button onClick={() => setState((s: number) => s + 1)}>
         Count: {state}
       </button>
