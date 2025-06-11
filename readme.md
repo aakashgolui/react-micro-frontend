@@ -1,33 +1,10 @@
-Sure! Here's a **single-file** `README.md` containing everything you need — including project overview, both Vite configs, and setup instructions — all in **one place**:
-
----
-
-```md
+````md
 # 🧩 Micro Frontend App (Vite + Module Federation)
 
 This project demonstrates a **micro frontend architecture** using [Vite](https://vitejs.dev/), [React](https://reactjs.org/), and [@originjs/vite-plugin-federation](https://github.com/originjs/vite-plugin-federation). It includes:
 
 - **Remote App** (`remote`): exposes a `Button` component and a shared store
 - **Host App** (`host`): dynamically loads modules from the remote app
-
----
-
-## 🗂️ Project Structure
-```
-
-micro-frontend-app/
-├── remote/
-│ ├── src/
-│ │ ├── Button.tsx
-│ │ └── store.ts
-│ └── vite.config.ts
-├── host/
-│ ├── src/
-│ │ └── App.tsx
-│ └── vite.config.ts
-└── README.md
-
-````
 
 ---
 
@@ -60,6 +37,7 @@ export default defineConfig({
     cssCodeSplit: false,
   },
 });
+```
 ````
 
 ---
@@ -173,9 +151,8 @@ Ensure the following dependencies are aligned in both `remote` and `host`:
 
 ## 👨‍💻 Author
 
-Built with ❤️ by \[Your Name]
+Built with ❤️ by \[Akash Golui]
 
 ```
 
-Let me know if you want to add deployment instructions, screenshots, or support for production builds (`vite preview` or static hosting).
 ```
